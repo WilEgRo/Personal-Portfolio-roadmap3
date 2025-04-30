@@ -1,0 +1,279 @@
+:root {
+    --background-color: #ffffff;
+    --background-color-list: #e4e0e0;
+    --text-color: #0e0d0d;
+    --text-p-color: #837e7ed7;
+    --accent-color: #3b6acf;
+    --accent-active-color: #1f6622;
+    --accent-hover-color: #1f9425;
+    --border-color: #000000;
+}
+
+/* estilos globales */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 0 0.25rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+a{
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/* header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img{
+    width: 120px;
+    height: 120px;
+}
+
+.logo p{
+    font-size: 45px;
+    margin: 0;
+}
+
+nav{
+    font-size: 1.35rem;
+    color: var(--accent-color);
+}
+
+nav ul{
+    display: flex;
+    margin: 10px;
+}
+
+nav ul li a{
+    font-size: 1.35rem;
+    padding: 17px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover{
+    margin: 0 0.25rem;
+    text-decoration: underline;
+}
+
+/* main */
+
+main{
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.desarollador{
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.desarollador p{
+    color: var(--text-p-color);
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.desarollador, .proyectos, .experiencia, .educacion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.proyectos h2{
+    margin-bottom: 0.25rem;
+}
+
+.proyectos ul{
+    text-align: center;
+    padding: 0;
+}
+
+.proyectos li{
+    padding: 0.25rem;
+}
+
+.experiencia h3{
+    text-align: left;
+}
+
+.experiencia article{
+    margin-bottom: 2rem;
+}
+
+.linea{
+    border-bottom: 1px solid var(--border-color);
+    margin: 0 3rem;
+}
+
+.educacion ul{
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+.educacion p{
+    margin: 0.25rem 0;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+blockquote{
+    border: 1px solid var(--accent-color);
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    padding: 0.25rem;
+    border-top: 1px solid var(--border-color);
+}
+
+@media (min-width: 768px) {
+    .contenido {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 2fr;
+        gap: 5px;
+        align-items: baseline;
+        grid-template-areas: 
+            "proyectos experiencia educacion"
+        ;
+    }
+    .proyectos {
+        grid-area: proyectos;
+    }
+
+    .proyectos li{
+        border-bottom: 1px solid var(--border-color);
+    }
+
+
+    .experiencia {
+        grid-area: experiencia;
+    }
+
+    .linea{
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .educacion {
+        grid-area: educacion;
+    }
+
+    .proyectos,
+    .experiencia,
+    .educacion {
+        width: unset;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    .desarollador {
+        height: 33vh;
+        justify-content: center;
+    }
+
+    h2,
+    .proyectos ul {
+        text-align: left;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .logo {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo p {
+        font-size: 17px;
+    }
+
+    nav {
+        margin: 0 1rem;
+        font-size: 1rem;
+    }
+
+    nav ul li a{
+        font-size: 1rem;
+        padding: 17px;
+        border-radius: 5px;
+    }
+
+    .testimonios{
+        display: flex;
+        padding: 1rem;
+    }
+
+    .testimonios blockquote{
+        margin: 0 1rem;
+        padding: 1rem;
+        border-radius: 45px;
+        border: 1px solid var(--border-color);
+    }
+
+    .testimonios blockquote p{
+        text-align: center;
+    }
+}
